@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.wrangler/
+.dev.vars*
+.env*
+!.env.example
+*.local
+*.log
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+outputs/*.png
+outputs/*.zip

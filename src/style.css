@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; width: 100%; min-height: 100%; }
+body { font-family: 'Segoe UI', Arial, sans-serif; color: #33483c; background: #f4f1e8; }
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:disabled { cursor: default; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #c29253; outline-offset: 4px; }
+.scaffold-home { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px; background: radial-gradient(ellipse at 50% 40%, #e0ebdb, transparent 58%), #f6f3eb; }
+.scaffold-home h1 { font: 64px/1.1 Georgia, serif; margin: 6px 0 20px; letter-spacing: -3px; }
+.scaffold-home p { line-height: 1.8; color: #748074; }
+.scaffold-home .scaffold-eyebrow { font-size: 10px; letter-spacing: 4px; margin-top: 30px; }
+.scaffold-tags { display: flex; gap: 8px; margin: 20px 0 48px; flex-wrap: wrap; justify-content: center; }
+.scaffold-tags span { background: #fff9; border: 1px solid #dce1d4; padding: 9px 14px; border-radius: 8px; font-size: 12px; }
+.scaffold-home small { color: #8b9286; font-size: 11px; }

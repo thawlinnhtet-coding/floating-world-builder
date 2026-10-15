@@ -1,0 +1,11 @@
+{
+  "objects": 40,
+  "medianMs": 16.699999999999818,
+  "p95Ms": 16.800000000000182,
+  "jsHeapBytes": 154756328,
+  "viewport": [
+    1440,
+    960
+  ],
+  "notes": "Full continuous player journey on the same Intel UHD Chrome laptop. rAF intervals include browser scheduling."
+}

@@ -1,4 +1,4 @@
--- Initial schema only. Publication endpoints are not implemented yet.
+-- Initial publication storage schema.
 CREATE TABLE IF NOT EXISTS publications (
   public_id TEXT PRIMARY KEY,
   schema_version INTEGER NOT NULL,

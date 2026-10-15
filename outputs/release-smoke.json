@@ -1,0 +1,59 @@
+{
+  "root": {
+    "status": 200,
+    "roundTripMs": 96.6121
+  },
+  "asset": {
+    "status": 200,
+    "roundTripMs": 19.03479999999999
+  },
+  "deepLink": {
+    "status": 200,
+    "roundTripMs": 126.9418
+  },
+  "health": {
+    "status": 200,
+    "roundTripMs": 62.0265
+  },
+  "requestBytes": 7974,
+  "create": {
+    "status": 201,
+    "roundTripMs": 52.93760000000003
+  },
+  "creationRetry": {
+    "status": 200,
+    "roundTripMs": 30.990400000000022
+  },
+  "read": {
+    "status": 200,
+    "roundTripMs": 21.853899999999953
+  },
+  "responseBytes": 8041,
+  "update": {
+    "status": 200,
+    "roundTripMs": 33.317399999999964
+  },
+  "localD1Query": [
+    {
+      "results": [
+        {
+          "publications": 1,
+          "largest_snapshot_bytes": 7918
+        }
+      ],
+      "success": true,
+      "meta": {
+        "duration": 0
+      }
+    }
+  ],
+  "delete": {
+    "status": 200,
+    "roundTripMs": 16.46120000000019
+  },
+  "deletedRead": {
+    "status": 404,
+    "roundTripMs": 6.682400000000143
+  },
+  "notes": "Compiled Worker plus local Miniflare D1 in a fresh dependency install. HTTP latency and local query metadata are not deployed Worker CPU or billed D1 usage. No remote resources were used."
+}

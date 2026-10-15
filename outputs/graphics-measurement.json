@@ -1,0 +1,65 @@
+{
+  "normal": {
+    "medianMs": 33.69999999999891,
+    "p95Ms": 66.69999999999891,
+    "jsHeapBytes": 141515231,
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x000046A3) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      960
+    ],
+    "objects": 80
+  },
+  "reduced": {
+    "medianMs": 33.29999999999927,
+    "p95Ms": 50.5,
+    "jsHeapBytes": 134166810,
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x000046A3) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      960
+    ],
+    "objects": 80
+  },
+  "rainyNight": {
+    "medianMs": 50,
+    "p95Ms": 66.70000000000437,
+    "jsHeapBytes": 132499569,
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x000046A3) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      960
+    ],
+    "objects": 80
+  },
+  "snowy": {
+    "medianMs": 49.900000000001455,
+    "p95Ms": 66.60000000000582,
+    "jsHeapBytes": 143232355,
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x000046A3) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      960
+    ],
+    "objects": 80
+  },
+  "screenshotMode": {
+    "medianMs": 49.900000000001455,
+    "p95Ms": 66.80000000000291,
+    "jsHeapBytes": 146450459,
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x000046A3) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      1440,
+      960
+    ],
+    "objects": 80
+  },
+  "captureMs": 2441,
+  "snapshotBytes": 7996,
+  "notes": "One local Intel UHD Chrome session. rAF includes scheduling; JS heap excludes GPU memory. Capture timing includes automation/download. No cross-device guarantee."
+}

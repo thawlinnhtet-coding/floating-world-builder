@@ -20,7 +20,7 @@ Players need clear placement controls, gentle guidance, reliable recovery from m
 
 ## Solution
 
-Create a free, desktop-browser 3D building game with a cozy low-poly visual style. Players begin with an empty floating island and trees unlocked. Ten sequential challenges introduce decorations and buildings, reveal a bridge and second island, and finish by unlocking a special castle. Players can then continue decorating freely.
+Create a free, desktop-browser 3D building game with a cozy, natural miniature-world visual style. Players begin with an empty floating island and trees unlocked. Ten sequential challenges introduce decorations and buildings, reveal a bridge and second island, and finish by unlocking a special castle. Players can then continue decorating freely.
 
 Use predefined island terrain, grid-based object placement, unlimited copies of unlocked catalog items subject to space and a measured performance limit, and reversible editing. Weather and time change the atmosphere without imposing gameplay penalties.
 
@@ -157,7 +157,8 @@ The first playtest succeeds when a new player can place and rearrange objects wi
 
 ### 5. Rendering, atmosphere, and performance
 
-- Use a consistent code-generated low-poly art style with pastel colors, soft lighting and shadows, attractive island silhouettes, clouds, and restrained placement/unlock animations.
+- Use a consistent code-generated, semi-realistic miniature-world art style. Preserve rich natural color while replacing visibly faceted cartoon forms with branching leafy trees, textured grass, irregular rocky cliffs and trailing plants, terracotta roof tiles, timber and plaster cottages, reflective pond water, atmospheric clouds, and soft daylight/shadows. Keep warm cream interface panels and restrained placement/unlock animations. This art-direction revision follows the request for a more realistic appearance after reviewing the colorful A+C prototype.
+- Follow the refined A+C interface direction: one persistent build dock with category tabs, previews rendered from the actual 3D objects, paging controls when needed, and editing tools in the same dock. Keep a compact expandable challenge summary, group world identity and atmosphere/sharing at the top, and remove redundant decorative captions and item-quantity badges. Keep small labels readable against the brighter world. The prototype captures this visual direction; production behavior still follows the full specification.
 - Use the Three.js WebGL 2 renderer. Detect unsupported graphics capability and show a useful message instead of a blank canvas.
 - Support smooth rotation, zoom, and pan with suitable limits for inspecting both islands.
 - Implement sunny, cloudy, rainy, and snowy conditions with smoothly blended atmospheric effects and animated particles where appropriate.
@@ -266,7 +267,7 @@ There is no existing testing prior art in the workspace. Avoid introducing separ
 
 ### Visual and performance acceptance
 
-- Manually inspect representative daytime, nighttime, rain, snow, both-island, and castle scenes for legibility, low-poly consistency, soft lighting, transition quality, and lack of clipping artifacts.
+- Manually inspect representative daytime, nighttime, rain, snow, both-island, and castle scenes for legibility, natural material and geometry consistency, soft lighting, transition quality, and lack of clipping artifacts.
 - Inspect interface clutter and pointer behavior during placement, selection, camera movement, screenshot mode, and visitor mode.
 - Test supported desktop browsers with WebGL 2 and the unsupported-capability message. Record the actual browser/hardware matrix used before making compatibility claims.
 - Measure frame times, memory behavior, screenshot capture, and interaction responsiveness on representative laptops at normal and reduced detail, including a near-cap world. Establish and document the object cap from results.

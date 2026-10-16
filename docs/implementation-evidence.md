@@ -1,10 +1,10 @@
 # Floating World Builder implementation evidence
 
-Recorded 15 October 2026. Project: `D:\FloatingWorldBuilder`, branch `implementation/mvp`.
+Recorded 16 October 2026. Project: `D:\FloatingWorldBuilder`, branch `implementation/mvp`.
 
 ## Delivered behavior
 
-Tickets 02–11 are implemented and locally verified. Ticket 12's implementation, setup guide, production build, local service smoke test, and automated checks are complete; deployed CPU/database quota evidence and the complete human first-use playtest remain open.
+Tickets 02–11 are implemented and locally verified. Ticket 12's implementation, setup guide, production build, local service smoke test, and automated checks are complete. The first Cloudflare production deployment and live Worker/D1 smoke check are complete; deployed CPU/database quota evidence and the complete human first-use playtest remain open.
 
 The production app starts empty, offers grid placement and safe editing, progresses through all ten approved challenges, unlocks the fixed bridge and second island, and supports castle placement and continued building. It includes local autosaves, private backups, undo/redo, graphics settings, four weather states, day/night cycles, clean PNG capture, and a real Worker/D1 publication lifecycle. Visitors have an isolated read-only view. The prototype remains on `prototype/ui-directions` at `90380e3`.
 
@@ -55,13 +55,13 @@ The compiled release smoke measured a 7,974-byte creation request, 8,041-byte pu
 
 Successful reads use one indexed publication query. Authorized creation/update/deletion normally uses four SQL statements: write-rate bucket increment, expired-bucket cleanup, then publication write/read or ownership read/write. Actual billed rows depend on indexes and expiry cleanup. Local D1 only returned a zero-duration aggregate-query metadata field; it did not supply deployed row-billing or CPU evidence. `outputs/release-smoke.json` records local HTTP timing and payload observations. Local round-trip time is **not Worker CPU time**.
 
-The generated production configuration routes `/api/*` through the Worker and uses Static Assets SPA fallback for client routes. All-zero D1 identification is local-only. README documents account sign-in, database creation, binding replacement, remote migrations, deployment, and post-deployment verification. No remote resources were created and no public internet deployment was claimed. Localhost visiting links work on this machine.
+The generated production configuration routes `/api/*` through the Worker and uses Static Assets SPA fallback for client routes. Production is deployed at `https://floating-world-builder.floating-world-builder.workers.dev/` with the `floating-worlds` D1 database in APAC; migrations `0001_publications.sql` and `0002_write_limits.sql` are applied. Live verification returned HTTP 200 for the app and `GET /api/health`, then passed create, idempotent retry, public read, stable-link update, unpublish, and post-delete 404 checks. The disposable smoke publication was deleted. A browser opened the deployed game and confirmed the starting island, challenge, and catalog rendered. Deployed CPU time and longer-term database/quota use remain unmeasured.
 
 Official limits were rechecked on 15 October 2026: Workers Free 100,000 dynamic requests/day and 10 ms CPU/invocation; D1 Free 500 MB/database and 2 MB row/string. See the official links in README. These limits are context for deployment, **not proof that deployed API CPU or database usage fits them**.
 
 ## Remaining acceptance work
 
-1. Configure the owner's Cloudflare account and real D1 resource, deploy, then measure CPU and D1 read/write/storage usage and verify remote deep links/ownership/error outcomes.
+1. Measure deployed Worker CPU and D1 read/write/storage usage, and exercise public deep links and error outcomes from a broader client/network matrix.
 2. Repeat the real first-use playtest after the Delete/weather changes and record unassisted placement/rearrangement, challenge understanding, and voluntary personalization within ten minutes.
 3. Broader browser/hardware coverage and sustained dense-scene memory/performance testing remain outside the observations recorded here; avoid compatibility or frame-rate guarantees.
 

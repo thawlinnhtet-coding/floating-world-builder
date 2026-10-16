@@ -40,7 +40,7 @@ button {
   position: relative;
   width: 100%;
   height: 100dvh;
-  min-height: 620px;
+  min-height: 0;
   overflow: hidden;
   background: #e3e9dd;
   font-size: 12px;
@@ -865,6 +865,93 @@ button {
   .panel {
     right: 12px;
     width: min(320px, calc(100% - 24px));
+  }
+}
+
+@media (max-width: 360px) {
+  .identity {
+    padding: 7px 8px;
+  }
+  .identity small {
+    display: none;
+  }
+  .identity strong {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .header-actions {
+    gap: 1px;
+    padding: 3px;
+  }
+  .header-actions > .icon {
+    width: 29px;
+  }
+  .header-actions > .primary {
+    margin-left: 0;
+    padding: 9px;
+  }
+  .catalog-items {
+    --capacity: 3;
+  }
+}
+
+@media (max-height: 480px) {
+  .game header {
+    top: 8px;
+  }
+  .journey {
+    top: 78px;
+    max-height: calc(100% - 220px);
+    overflow-y: auto;
+  }
+  .challenge-summary {
+    padding: 8px 12px;
+  }
+  .challenge-summary > strong {
+    margin: 6px 0 5px;
+  }
+  .progress {
+    margin-top: 6px;
+  }
+  .build-dock {
+    bottom: 8px;
+    padding: 6px 10px 4px;
+  }
+  .dock-heading {
+    margin-bottom: 4px;
+  }
+  .catalog-item {
+    min-height: 0;
+    height: 58px;
+    padding: 1px 3px 3px;
+  }
+  .preview {
+    height: 33px;
+  }
+  .preview img {
+    width: 58px;
+    height: 38px;
+  }
+  .catalog-item > small {
+    margin-top: 1px;
+  }
+  .dock-footer {
+    min-height: 24px;
+    padding-top: 3px;
+    margin-top: 3px;
+  }
+  .dock-footer .icon {
+    width: 24px;
+    height: 24px;
+  }
+  .explore {
+    height: 23px;
+  }
+  .instruction {
+    font-size: 8px;
+  }
+  .selection {
+    bottom: 145px;
   }
 }
 

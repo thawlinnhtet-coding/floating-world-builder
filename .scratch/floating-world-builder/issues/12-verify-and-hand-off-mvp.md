@@ -8,7 +8,7 @@ Breakdown approved on 15 October 2026.
 
 **Status:** ready-for-human
 
-**Execution:** implementation complete; external release validation pending
+**Execution:** production deployment complete; external usage evidence and human playtest pending
 
 - [x] Document and verify dependency setup, local run/build, disposable local D1 migration, API/browser checks, and clean production startup with the approved UI.
 - [x] Provide Cloudflare Workers Static Assets/D1 configuration and migration/deployment instructions. Document account/resource prerequisites; do not treat absent credentials as a successful remote deployment or create paid resources.
@@ -28,4 +28,4 @@ Breakdown approved on 15 October 2026.
 
 ## Implementation evidence — 15 October 2026
 
-Setup, build, migrations, compiled static/deep-link/API smoke, 26 distinct browser/API checks, and available-hardware visual/performance evidence are recorded in `docs/implementation-evidence.md`. The combined API CPU/billing criterion remains open despite measured local payloads: deployed CPU and D1 billed usage require a configured account/resource. The ten-minute playtest remains open: the user reported Delete discoverability and invisible weather; both were fixed and browser-verified, but next-challenge comprehension and voluntary personalization have not been observed. No credentials or remote deployment were assumed.
+Setup, build, migrations, compiled static/deep-link/API smoke, 26 distinct browser/API checks, and available-hardware visual/performance evidence are recorded in `docs/implementation-evidence.md`. Production is deployed at `https://floating-world-builder.floating-world-builder.workers.dev/`; live health, SPA routing, creation retry, read, update, unpublish, and post-delete behavior were verified, and the disposable smoke publication was removed. Deployed CPU and D1 billed usage remain unmeasured. The ten-minute playtest remains open: Delete discoverability and weather visibility were fixed and browser-verified, but next-challenge comprehension and voluntary personalization have not been observed.

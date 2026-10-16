@@ -46,7 +46,9 @@ The suite verifies public player/visitor behavior and real Worker/D1 contracts. 
 
 ## Cloudflare deployment
 
-No paid assets or services are required by the app. A Cloudflare account and a real D1 database are required to make public links accessible beyond this machine. The all-zero database identifier is intentionally local-only.
+No paid assets or services are required by the app. A Cloudflare account and a real D1 database are required to make public links accessible beyond this machine. Keep the production database binding in `wrangler.jsonc`; local and test runs use their own D1 storage.
+
+Live deployment: [https://floating-world-builder.floating-world-builder.workers.dev/](https://floating-world-builder.floating-world-builder.workers.dev/). The production Worker is bound to the `floating-worlds` D1 database in APAC.
 
 1. Sign in with `npx wrangler login` using your own account.
 2. Create a D1 database with `npx wrangler d1 create floating-worlds`.
@@ -57,7 +59,7 @@ No paid assets or services are required by the app. A Cloudflare account and a r
 
 The project targets Workers Free and D1 Free. Static asset requests remain outside the publishing Worker except `/api/*`. Official limits rechecked on 15 October 2026: Workers Free has 100,000 dynamic requests/day and 10 ms CPU/invocation; D1 Free has a 500 MB per-database maximum and a 2 MB row/string limit. Request/data limits here are intentionally lower. Rate-limit metadata also consumes database operations. Quota exhaustion and full storage may interrupt sharing; local building remains available after the page has loaded. The app does not include offline installation/PWA packaging.
 
-Sources: [Workers limits](https://developers.cloudflare.com/workers/platform/limits/), [D1 limits](https://developers.cloudflare.com/d1/platform/limits/), [Static Assets billing](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/). No remote resources were created or deployed during local implementation.
+Sources: [Workers limits](https://developers.cloudflare.com/workers/platform/limits/), [D1 limits](https://developers.cloudflare.com/d1/platform/limits/), [Static Assets billing](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/). The first production deployment and live API smoke check completed on 16 October 2026; deployed CPU and ongoing quota usage still need measurement.
 
 Detailed local evidence, performance limits, and remaining external checks are recorded in [implementation evidence](docs/implementation-evidence.md).
 

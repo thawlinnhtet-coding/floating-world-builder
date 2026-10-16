@@ -12,7 +12,7 @@
     {
       "binding": "DB",
       "database_name": "floating-worlds",
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "3ee29b9f-bf07-47e5-8b29-ed11d3831a50",
       "migrations_dir": "migrations"
     }
   ]
